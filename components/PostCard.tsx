@@ -20,8 +20,10 @@ export default function PostCard({
   date,
 }: PostCardProps) {
   return (
-    <article className="group">
-      <div className="mb-6 h-48 bg-gradient-to-br from-sage to-ash rounded-lg overflow-hidden" />
+    <article className="group hover:-translate-y-2 transition-all duration-500">
+      <div className="mb-6 h-48 bg-gradient-to-br from-sage to-ash rounded-lg overflow-hidden">
+        <div className="w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+      </div>
 
       <span className="inline-block uppercase text-xs font-bold tracking-widest text-olive mb-3">
         {category}
