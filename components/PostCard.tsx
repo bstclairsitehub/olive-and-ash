@@ -9,6 +9,7 @@ interface PostCardProps {
   category: string;
   author: string;
   date: string;
+  image?: string;
 }
 
 export default function PostCard({
@@ -18,11 +19,12 @@ export default function PostCard({
   category,
   author,
   date,
+  image,
 }: PostCardProps) {
   return (
     <article className="group hover:-translate-y-2 transition-all duration-500">
       <div className="mb-6 h-48 bg-gradient-to-br from-sage to-ash rounded-lg overflow-hidden">
-        <div className="w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+        <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
       </div>
 
       <span className="inline-block uppercase text-xs font-bold tracking-widest text-olive mb-3">

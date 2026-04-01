@@ -14,6 +14,7 @@ const blogPosts = [
     category: 'Lifestyle',
     author: 'Sarah Mitchell',
     date: '2024-03-15',
+    image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&h=600&fit=crop',
   },
   {
     slug: 'the-art-of-minimalism',
@@ -23,6 +24,7 @@ const blogPosts = [
     category: 'Philosophy',
     author: 'Sarah Mitchell',
     date: '2024-03-08',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop',
   },
   {
     slug: 'earthy-interiors-design-guide',
@@ -32,6 +34,7 @@ const blogPosts = [
     category: 'Design',
     author: 'Sarah Mitchell',
     date: '2024-02-28',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop',
   },
   {
     slug: 'seasonal-rituals-embrace-change',
@@ -41,6 +44,7 @@ const blogPosts = [
     category: 'Wellness',
     author: 'Sarah Mitchell',
     date: '2024-02-20',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop',
   },
   {
     slug: 'sustainable-fashion-choices',
@@ -50,6 +54,7 @@ const blogPosts = [
     category: 'Style',
     author: 'Sarah Mitchell',
     date: '2024-02-12',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=500&fit=crop',
   },
   {
     slug: 'the-power-of-intentional-reading',
@@ -59,6 +64,7 @@ const blogPosts = [
     category: 'Culture',
     author: 'Sarah Mitchell',
     date: '2024-02-05',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop',
   },
 ];
 
@@ -96,6 +102,7 @@ export default function Home() {
           category={featuredPost.category}
           author={featuredPost.author}
           date={featuredPost.date}
+          image={featuredPost.image}
         />
 
         <section id="journal" className="scroll-mt-20">
@@ -116,6 +123,7 @@ export default function Home() {
                   category={post.category}
                   author={post.author}
                   date={post.date}
+                  image={post.image}
                 />
               </div>
             ))}
@@ -142,6 +150,7 @@ export default function Home() {
                   category={post.category}
                   author={post.author}
                   date={post.date}
+                  image={post.image}
                 />
               </div>
             ))}

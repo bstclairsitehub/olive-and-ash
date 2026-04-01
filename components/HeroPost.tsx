@@ -9,7 +9,10 @@ interface HeroPostProps {
   category: string;
   author: string;
   date: string;
+  image?: string;
 }
+
+const heroImage = 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&h=600&fit=crop';
 
 export default function HeroPost({
   slug,
@@ -18,12 +21,13 @@ export default function HeroPost({
   category,
   author,
   date,
+  image,
 }: HeroPostProps) {
   return (
     <section className="mb-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="h-80 lg:h-96 bg-gradient-to-br from-olive to-ash rounded-lg group overflow-hidden">
-          <div className="w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+          <img src={image || heroImage} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
         </div>
 
         <div>
