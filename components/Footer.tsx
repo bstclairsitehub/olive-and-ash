@@ -6,64 +6,94 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-cream mt-24">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-3 gap-12 mb-12">
+    <footer className="relative bg-darker text-gray-100 border-t border-gold/20">
+      {/* Accent line at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-8 py-20">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+          {/* Brand Section */}
           <div>
-            <h3 className="font-heading text-xl font-bold mb-4">Olive &amp; Ash</h3>
-            <p className="text-sm text-sage">
-              A minimalist editorial space exploring slow living and thoughtful lifestyle.
+            <h3 className="font-heading text-2xl font-bold text-gold mb-4 tracking-widest">OLIVE &amp; ASH</h3>
+            <p className="text-sm text-gray-400 leading-relaxed">
+              Premium editorial insights on intentional living, design, and contemporary lifestyle.
             </p>
           </div>
 
+          {/* Navigation */}
           <div>
-            <h4 className="font-heading text-sm font-bold uppercase tracking-wide mb-4">Navigate</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-gold mb-6">Navigate</h4>
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <Link href="/" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/#journal" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <Link href="/#journal" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   Journal
                 </Link>
               </li>
               <li>
-                <a href="#about" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <a href="#about" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   About
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Connect */}
           <div>
-            <h4 className="font-heading text-sm font-bold uppercase tracking-wide mb-4">Connect</h4>
-            <ul className="space-y-2">
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-gold mb-6">Connect</h4>
+            <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <a href="#" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <a href="#" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   Newsletter
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-cream hover:text-olive transition-colors duration-200">
+                <a href="#" className="text-sm text-gray-400 hover:text-gold transition-colors duration-300">
                   Contact
                 </a>
               </li>
             </ul>
           </div>
+
+          {/* Newsletter Signup */}
+          <div>
+            <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-gold mb-6">Subscribe</h4>
+            <p className="text-xs text-gray-500 mb-4">Get new essays in your inbox</p>
+            <form className="flex flex-col gap-2">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="px-4 py-2.5 bg-darker/50 border border-gold/20 rounded-sm text-sm text-white placeholder-gray-600 focus:outline-none focus:border-gold/50 transition-colors duration-300"
+              />
+              <button
+                type="submit"
+                className="btn-luxury text-xs py-2"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
 
-        <div className="border-t border-sage pt-8">
-          <p className="text-center text-sm text-sage">
+        {/* Divider */}
+        <div className="section-divider my-12" />
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <p className="text-xs text-gray-500 uppercase tracking-widest">
             &copy; {currentYear} Olive &amp; Ash. All rights reserved.
           </p>
-          <p className="text-center text-xs text-sage/60 mt-2 tracking-widest uppercase">
+          <p className="text-xs text-gray-600 uppercase tracking-widest mt-6 md:mt-0">
             Designed &amp; Developed by St. Clair Design Co.
           </p>
         </div>

@@ -14,7 +14,7 @@ const blogPosts = [
     category: 'Lifestyle',
     author: 'Sarah Mitchell',
     date: '2024-03-15',
-    image: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1559027615-cd2628902d4a?w=1200&h=600&fit=crop&q=80',
   },
   {
     slug: 'the-art-of-minimalism',
@@ -24,7 +24,7 @@ const blogPosts = [
     category: 'Philosophy',
     author: 'Sarah Mitchell',
     date: '2024-03-08',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'earthy-interiors-design-guide',
@@ -34,7 +34,7 @@ const blogPosts = [
     category: 'Design',
     author: 'Sarah Mitchell',
     date: '2024-02-28',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'seasonal-rituals-embrace-change',
@@ -44,7 +44,7 @@ const blogPosts = [
     category: 'Wellness',
     author: 'Sarah Mitchell',
     date: '2024-02-20',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'sustainable-fashion-choices',
@@ -54,7 +54,7 @@ const blogPosts = [
     category: 'Style',
     author: 'Sarah Mitchell',
     date: '2024-02-12',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'the-power-of-intentional-reading',
@@ -64,7 +64,7 @@ const blogPosts = [
     category: 'Culture',
     author: 'Sarah Mitchell',
     date: '2024-02-05',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-150784272343-583f20270319?w=800&h=500&fit=crop&q=80',
   },
 ];
 
@@ -93,29 +93,39 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cream">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <HeroPost
-          slug={featuredPost.slug}
-          title={featuredPost.title}
-          excerpt={featuredPost.excerpt}
-          category={featuredPost.category}
-          author={featuredPost.author}
-          date={featuredPost.date}
-          image={featuredPost.image}
-        />
+    <div className="bg-dark text-white">
+      {/* Hero Section */}
+      <HeroPost
+        slug={featuredPost.slug}
+        title={featuredPost.title}
+        excerpt={featuredPost.excerpt}
+        category={featuredPost.category}
+        author={featuredPost.author}
+        date={featuredPost.date}
+        image={featuredPost.image}
+      />
 
-        <section id="journal" className="scroll-mt-20">
-          <div className="mb-16 scroll-reveal">
-            <h2 className="font-heading text-4xl font-bold text-charcoal mb-2">
+      {/* Recent Essays Section - Dark Background */}
+      <section id="journal" className="relative bg-dark py-32">
+        <div className="max-w-7xl mx-auto px-8">
+          {/* Section Header */}
+          <div className="mb-20 scroll-reveal">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="accent-bar" />
+              <span className="uppercase text-xs font-bold tracking-widest text-gold">Curated Collection</span>
+            </div>
+            <h2 className="font-heading text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-2xl">
               Recent Essays
             </h2>
-            <div className="w-12 h-1 bg-olive rounded" />
+            <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
+              Thoughtful writing on design, lifestyle, and intentional living.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
-            {recentPosts.map((post) => (
-              <div key={post.slug} className="scroll-reveal">
+          {/* Card Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
+            {recentPosts.map((post, idx) => (
+              <div key={post.slug} className="scroll-reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
                 <PostCard
                   slug={post.slug}
                   title={post.title}
@@ -129,20 +139,36 @@ export default function Home() {
             ))}
           </div>
 
+          {/* CTA Button */}
           <div className="text-center scroll-reveal">
-            <Link
-              href="#all-posts"
-              className="inline-block bg-olive text-cream px-8 py-3 rounded hover:bg-ash hover:-translate-y-1 transition-all duration-500 font-semibold shadow-md hover:shadow-lg"
-            >
-              View All Essays
+            <Link href="#all-posts" className="btn-luxury">
+              Explore All Essays
             </Link>
           </div>
+        </div>
+      </section>
 
-          <hr className="my-16" />
+      {/* Divider */}
+      <div className="section-divider mx-8" />
 
+      {/* All Essays Section - Slightly Lighter Dark */}
+      <section className="relative bg-darker py-32">
+        <div className="max-w-7xl mx-auto px-8">
+          {/* Section Header */}
+          <div className="mb-20 scroll-reveal">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="accent-bar" />
+              <span className="uppercase text-xs font-bold tracking-widest text-gold">Complete Archive</span>
+            </div>
+            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white">
+              All Essays
+            </h2>
+          </div>
+
+          {/* Full Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-12">
-            {blogPosts.slice(3).map((post) => (
-              <div key={post.slug} className="scroll-reveal">
+            {blogPosts.slice(3).map((post, idx) => (
+              <div key={post.slug} className="scroll-reveal" style={{ transitionDelay: `${idx * 100}ms` }}>
                 <PostCard
                   slug={post.slug}
                   title={post.title}
@@ -155,32 +181,46 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-16 text-center scroll-reveal">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="font-heading text-3xl font-bold text-charcoal mb-4">
-              Stay Updated
+      {/* Newsletter Section - Premium Dark */}
+      <section className="relative bg-dark py-32 border-t border-gold/20">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="scroll-reveal">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="accent-bar" />
+              <span className="uppercase text-xs font-bold tracking-widest text-gold">Stay Connected</span>
+            </div>
+
+            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-6">
+              Subscribe to Our Newsletter
             </h2>
-            <p className="text-lg text-ash mb-8">
-              Subscribe to our newsletter for thoughtful essays delivered to your inbox.
+
+            <p className="text-lg text-gray-400 mb-10 leading-relaxed max-w-2xl">
+              Receive curated essays and insights delivered directly to your inbox. Premium editorial content, no spam.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3">
+
+            <form className="flex flex-col sm:flex-row gap-4 max-w-2xl">
               <input
                 type="email"
-                placeholder="Your email"
-                className="flex-1 px-6 py-3 bg-white border border-sage rounded text-charcoal placeholder-sage focus:outline-none focus:border-olive transition-all duration-300 focus:shadow-md"
+                placeholder="your@email.com"
+                className="flex-1 px-6 py-3.5 bg-darker border border-gold/30 rounded-sm text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-all duration-300 font-body text-sm"
               />
               <button
                 type="submit"
-                className="bg-olive text-cream px-8 py-3 rounded hover:bg-ash hover:-translate-y-1 transition-all duration-500 font-semibold whitespace-nowrap shadow-md hover:shadow-lg"
+                className="btn-luxury whitespace-nowrap"
               >
                 Subscribe
               </button>
             </form>
+
+            <p className="text-xs text-gray-600 mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

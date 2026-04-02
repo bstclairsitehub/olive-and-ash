@@ -22,40 +22,57 @@ export default function PostCard({
   image,
 }: PostCardProps) {
   return (
-    <article className="group hover:-translate-y-2 transition-all duration-500">
-      <div className="mb-6 h-48 bg-gradient-to-br from-sage to-ash rounded-lg overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+    <article className="card-luxury group">
+      {/* Image Container */}
+      <div className="img-container mb-8 h-64 rounded-sm overflow-hidden bg-darker relative">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+          <div className="accent-bar mr-3" />
+          <span className="text-xs font-bold tracking-widest text-gold uppercase">Read Article</span>
+        </div>
       </div>
 
-      <span className="inline-block uppercase text-xs font-bold tracking-widest text-olive mb-3">
-        {category}
-      </span>
-
-      <Link href={`/blog/${slug}`}>
-        <h3 className="font-heading text-2xl font-bold text-charcoal mb-4 group-hover:text-olive transition-colors duration-200">
-          {title}
-        </h3>
-      </Link>
-
-      <p className="text-ash leading-relaxed mb-4">
-        {excerpt}
-      </p>
-
-      <div className="flex items-center justify-between">
-        <span className="text-sm text-sage">
-          <span>{author}</span>
-          <span className="mx-2">•</span>
-          <time dateTime={date}>
-            {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-          </time>
+      {/* Content Section */}
+      <div className="relative">
+        {/* Category Badge */}
+        <span className="inline-block uppercase text-xs font-bold tracking-widest text-gold mb-4 transition-colors duration-300 group-hover:text-gold/80">
+          {category}
         </span>
 
-        <Link
-          href={`/blog/${slug}`}
-          className="text-sm font-semibold text-olive hover:text-ash transition-colors duration-200"
-        >
-          →
+        {/* Title */}
+        <Link href={`/blog/${slug}`}>
+          <h3 className="font-heading text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-gold transition-colors duration-300 leading-tight">
+            {title}
+          </h3>
         </Link>
+
+        {/* Excerpt */}
+        <p className="text-gray-400 leading-relaxed mb-6 text-base line-clamp-3">
+          {excerpt}
+        </p>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between pt-6 border-t border-gold/10">
+          <span className="text-xs text-gray-500 uppercase tracking-widest">
+            <span className="text-gray-400 font-medium">{author}</span>
+            <span className="mx-2">•</span>
+            <time dateTime={date}>
+              {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </time>
+          </span>
+
+          <Link
+            href={`/blog/${slug}`}
+            className="text-gold hover:text-gold/80 transition-colors duration-200 font-bold text-lg"
+          >
+            →
+          </Link>
+        </div>
       </div>
     </article>
   );
