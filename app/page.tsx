@@ -24,7 +24,7 @@ const blogPosts = [
     category: 'Philosophy',
     author: 'Sarah Mitchell',
     date: '2024-03-08',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'earthy-interiors-design-guide',
@@ -34,7 +34,7 @@ const blogPosts = [
     category: 'Design',
     author: 'Sarah Mitchell',
     date: '2024-02-28',
-    image: 'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800&h=500&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'seasonal-rituals-embrace-change',
@@ -44,7 +44,7 @@ const blogPosts = [
     category: 'Wellness',
     author: 'Sarah Mitchell',
     date: '2024-02-20',
-    image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=800&h=500&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'sustainable-fashion-choices',
@@ -54,7 +54,7 @@ const blogPosts = [
     category: 'Style',
     author: 'Sarah Mitchell',
     date: '2024-02-12',
-    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&h=500&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=500&fit=crop&q=80',
   },
   {
     slug: 'the-power-of-intentional-reading',
@@ -64,7 +64,7 @@ const blogPosts = [
     category: 'Culture',
     author: 'Sarah Mitchell',
     date: '2024-02-05',
-    image: 'https://images.unsplash.com/photo-150784272343-583f20270319?w=800&h=500&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=500&fit=crop&q=80',
   },
 ];
 
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="mb-20 scroll-reveal">
             <div className="flex items-center gap-4 mb-6">
               <div className="accent-bar" />
-              <span className="uppercase text-xs font-bold tracking-widest text-gold">Curated Collection</span>
+              <span className="uppercase text-xs font-bold tracking-widest text-olive">Curated Collection</span>
             </div>
             <h2 className="font-heading text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-2xl">
               Recent Essays
@@ -158,7 +158,7 @@ export default function Home() {
           <div className="mb-20 scroll-reveal">
             <div className="flex items-center gap-4 mb-6">
               <div className="accent-bar" />
-              <span className="uppercase text-xs font-bold tracking-widest text-gold">Complete Archive</span>
+              <span className="uppercase text-xs font-bold tracking-widest text-olive">Complete Archive</span>
             </div>
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white">
               All Essays
@@ -185,12 +185,12 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section - Premium Dark */}
-      <section className="relative bg-dark py-32 border-t border-gold/20">
+      <section className="relative bg-dark py-32 border-t border-olive/20">
         <div className="max-w-4xl mx-auto px-8">
           <div className="scroll-reveal">
             <div className="flex items-center gap-4 mb-8">
               <div className="accent-bar" />
-              <span className="uppercase text-xs font-bold tracking-widest text-gold">Stay Connected</span>
+              <span className="uppercase text-xs font-bold tracking-widest text-olive">Stay Connected</span>
             </div>
 
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -205,7 +205,7 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="flex-1 px-6 py-3.5 bg-darker border border-gold/30 rounded-sm text-white placeholder-gray-600 focus:outline-none focus:border-gold transition-all duration-300 font-body text-sm"
+                className="flex-1 px-6 py-3.5 bg-darker border border-olive/30 rounded-sm text-white placeholder-gray-600 focus:outline-none focus:border-olive transition-all duration-300 font-body text-sm"
               />
               <button
                 type="submit"

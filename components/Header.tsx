@@ -19,14 +19,14 @@ export default function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'backdrop-blur-md bg-dark/80 border-b border-gold/20 shadow-luxury'
-          : 'bg-transparent border-b border-gold/10'
+          ? 'backdrop-blur-md bg-dark/80 border-b border-olive/20 shadow-luxury'
+          : 'bg-transparent border-b border-olive/10'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-8 py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center group">
-            <h1 className="font-heading text-2xl font-bold text-gold tracking-widest hover:text-gold/80 transition-colors duration-300">
+            <h1 className="font-heading text-2xl font-bold text-olive tracking-widest hover:text-olive/80 transition-colors duration-300">
               OLIVE &amp; ASH
             </h1>
           </Link>
@@ -35,7 +35,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className="font-body text-xs text-gray-300 hover:text-gold transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-500 hover:after:w-full"
+                className="font-body text-xs text-gray-300 hover:text-olive transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-olive after:transition-all after:duration-500 hover:after:w-full"
               >
                 Home
               </Link>
@@ -43,7 +43,7 @@ export default function Header() {
             <li>
               <Link
                 href="/#journal"
-                className="font-body text-xs text-gray-300 hover:text-gold transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-500 hover:after:w-full"
+                className="font-body text-xs text-gray-300 hover:text-olive transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-olive after:transition-all after:duration-500 hover:after:w-full"
               >
                 Journal
               </Link>
@@ -51,7 +51,7 @@ export default function Header() {
             <li>
               <a
                 href="#about"
-                className="font-body text-xs text-gray-300 hover:text-gold transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-500 hover:after:w-full"
+                className="font-body text-xs text-gray-300 hover:text-olive transition-all duration-300 uppercase tracking-widest font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-olive after:transition-all after:duration-500 hover:after:w-full"
               >
                 About
               </a>

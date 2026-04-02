@@ -59,7 +59,7 @@ export default function HeroPost({
           {/* Category Badge */}
           <div className="mb-8 flex items-center gap-3">
             <div className="accent-bar" />
-            <span className="inline-block uppercase text-xs font-bold tracking-widest text-gold fade-up fade-up-delay-1">
+            <span className="inline-block uppercase text-xs font-bold tracking-widest text-olive fade-up fade-up-delay-1">
               Featured Essay
             </span>
           </div>
@@ -77,7 +77,7 @@ export default function HeroPost({
           {/* Meta Information */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12 fade-up fade-up-delay-4">
             <div className="flex items-center gap-1 text-sm text-gray-400">
-              <span className="font-medium text-gold">By {author}</span>
+              <span className="font-medium text-olive">By {author}</span>
               <span className="mx-2">•</span>
               <time dateTime={date} className="text-gray-400">
                 {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -100,8 +100,8 @@ export default function HeroPost({
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs text-gold uppercase tracking-widest">Scroll</span>
-          <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span className="text-xs text-olive uppercase tracking-widest">Scroll</span>
+          <svg className="w-5 h-5 text-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
